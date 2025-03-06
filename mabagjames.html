@@ -1,1 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Page - mabagjames</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #000;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        header {
+            width: 100%;
+            background: #111;
+            color: #00ff00;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            box-shadow: 0 0 20px #00ff00;
+            border-bottom: 3px solid #00ff00;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 14px;
+            box-shadow: 0 0 15px #00ff00;
+            border: 2px solid #00ff00;
+            background: #004400;
+            color: #00ff00;
+            text-align: center;
+        }
+        nav a:hover {
+            transform: scale(1.1);
+            filter: brightness(1.5);
+        }
+        .search-container {
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #00ff00;
+            background: black;
+            color: #00ff00;
+            font-size: 16px;
+            text-align: center;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        main {
+            display: flex;
+            width: 80%;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .profile, .sidebar, .newsfeed {
+            background: #111;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px #00ff00;
+            border: 2px solid #00ff00;
+        }
+        .profile {
+            width: 25%;
+            text-align: center;
+        }
+        .profile img {
+            width: 90%;
+            border-radius: 0;
+            margin-bottom: 10px;
+            border: 4px solid #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        .newsfeed {
+            width: 50%;
+        }
+        .post {
+            background: #222;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.2s;
+            font-style: italic;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        .post:hover {
+            background: #333;
+            transform: scale(1.05);
+        }
+        .sidebar {
+            width: 25%;
+        }
+        button {
+            background: #00ff00;
+            color: black;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            font-weight: bold;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        button:hover {
+            background: #008000;
+            transform: scale(1.1);
+        }
+        .decline {
+            background: #222;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        .decline:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>mabagjames' Social Page</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Messages</a>
+            <a href="#">Friends</a>
+            <a href="#">Notifications</a>
+        </nav>
+    </header>
+    <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-bar">
+    </div>
+    <main>
+        <aside class="profile">
+            <img src="pogijemsz.jpg" alt="Profile Picture">
+            <h2>mabagjames</h2>
+            <p>so long and goodnight...</p>
+            <p>Playing: <strong>My Chemical Romance - Helena</strong></p>
+        </aside>
+        <section class="newsfeed">
+            <h2>Newsfeed</h2>
+            <div class="post">Just drank a Monster, now coding at 200% speed!</div>
+            <div class="post">This page is now officially energized! #MonsterVibes</div>
+            <div class="post">What a tiring day...</div>
+            <div class="post">Taking a break from coding. Time to game!</div>
+            <div class="post">Finally friday</div>
+        </section>
+        <aside class="sidebar">
+            <div class="events">
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li>Call of Duty Mobile Tournament</li>
+                    <li>MCR Concert</li>
+                    <li>SIA Activity 4</li>
+                </ul>
+            </div>
+            <div class="friend-requests">
+                <h2>Friend Requests</h2>
+                <ul>
+                    <li>
+                        John Doe
+                        <div class="button-container">
+                            <button class="accept">Accept</button>
+                            <button class="decline">Decline</button>
+                        </div>
+                    </li>
+                    <li>
+                        Jane Smith
+                        <div class="button-container">
+                            <button class="accept">Accept</button>
+                            <button class="decline">Decline</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
